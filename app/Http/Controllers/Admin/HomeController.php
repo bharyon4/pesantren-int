@@ -32,7 +32,7 @@ class HomeController extends Controller {
     public function postMemberLogin(Request $request){
         $email = $request->admin_username;
         $password = $request->admin_password;
-        $userdata = array('username' => $email, 'password'  => $password, 'is_active' => 1);
+        $userdata = array('email' => $email, 'password'  => $password, 'is_active' => 1);
         
         if (Auth::guard("web")->attempt($userdata, $request->remember)) {
                 $request->session()->regenerate();

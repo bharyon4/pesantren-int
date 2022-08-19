@@ -36,26 +36,7 @@
           showTime();
         </script>
         @yield('javascript')
-        <script>
-            setInterval(function(){
-                $(document).ready(function(){
-                    $.ajax({
-                        type: "GET",
-                        url : "{{ URL::to('/') }}/session-expired",
-                        success: function(url){
-                            if(url !== "") {
-                                $("#modal-session-expired").empty();
-                                $("#modal-session-expired").html(url);
-                                $("#session-expired").modal();
-                                setTimeout(function(){
-                                    document.getElementById("logout").click();
-                                }, 5000);
-                            }
-                        }
-                    });
-                });
-            }, 20000);
-        </script>
+        
         <div id="modal-session-expired"></div>
     </body>
 </html>

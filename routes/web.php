@@ -7,6 +7,6 @@ Route::get('/login_admin', 'App\Http\Controllers\Admin\HomeController@getMemberL
 Route::post('/login_admin', 'App\Http\Controllers\Admin\HomeController@postMemberLogin');
 
 Route::prefix('/')->group(function () {
-    Route::get('/adm/logout', 'App\Http\Controllers\Admin\HomeController@getAdminLogout')->middleware('auth');
-    Route::get('/adm/dashboard', 'App\Http\Controllers\Admin\HomeController@getDashboard')->name('admDashboard')->middleware('auth');
+    Route::get('/logout_admin', 'App\Http\Controllers\Admin\HomeController@getAdminLogout')->middleware('auth');
+    Route::get('/dashboard', 'App\Http\Controllers\Admin\HomeController@getDashboard')->name('admDashboard')->middleware('auth');
 });

@@ -13,31 +13,19 @@
     </div>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
-            <?php
-                    $name = $dataUser->name;
-                    if($dataUser->user_type >= 10){
-                        $name = $dataUser->name.' - '.$dataUser->code;
-                    }
-                ?>
             <li class="nav-item">
-                    <a href="#!" class="pop-search text-white" ><span>{{$name}}</span></a>
+                    <a href="#!" class="pop-search text-white" ><span>{{$dataUser->name}}</span></a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <?php
                     $type = 'ADMIN';
-                    if($dataUser->user_type == 3){
-                        $type = 'FINANCE';
-                    }
-                    if($dataUser->user_type == 10){
-                        $type = 'DISTRIBUTOR';
-                    }
                     if($dataUser->user_type == 20){
-                        $type = 'AGENT';
+                        $type = 'GURU';
                     }
                     if($dataUser->user_type == 21){
-                        $type = 'MEMBER';
+                        $type = 'SISWA';
                     }
                 ?>
                 <a href="#!" class="pop-search text-white" ><span>{{$type}}</span></a>
