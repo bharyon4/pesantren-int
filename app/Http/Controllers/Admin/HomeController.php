@@ -57,5 +57,19 @@ class HomeController extends Controller {
     }
     
     
+    //contoh
+    public function getTable(){
+        $dataUser = Auth::user();
+        return view('admin.home.cth_table')
+                    ->with('dataUser', $dataUser);
+    }
+    
+    public function getForm(){
+        $dataUser = Auth::user();
+        return view('admin.home.cth_form')
+                    ->with('dataUser', $dataUser);
+    }
+    
+    
     
 }

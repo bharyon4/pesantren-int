@@ -14,6 +14,20 @@
                     </a>
                 </li>
                 
+                <li class="nav-item pcoded-hasmenu ">
+                    <a href="#!" class="nav-link ">
+                    <span class="pcoded-micon"><i class="feather icon-file-text"></i></span>
+                    <span class="pcoded-mtext">Contoh</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li>
+                             <a href="{{ URL::to('/') }}/table">Tabel</a>
+                        </li>
+                        <li>
+                             <a href="{{ URL::to('/') }}/form">Form</a>
+                        </li>
+                    </ul>
+                </li>
 
                 <li class="nav-item">
                     <a href="{{ URL::to('/') }}/logout_admin" class="nav-link ">
