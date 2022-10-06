@@ -18,13 +18,13 @@ class CreateSiswa extends Migration
             $table->bigIncrements('id');
             $table->string('nis', 25)->nullable();
             $table->string('nisn', 30)->nullable();
+            $table->string('nik', 30)->nullable();
+            $table->string('no_kk', 30)->nullable();
             $table->string('nama', 230);
             $table->string('tempat_lahir', 230);
             $table->date('tgl_lahir');
             $table->smallInteger('j_kelamin')->comment('1 = laki-laki, 2 => perempuan');
-            $table->smallInteger('tinggi_badan')->nullable();
-            $table->smallInteger('berat_badan')->nullable();
-            $table->string('gol_darah', 25)->nullable();
+            $table->string('agama', 30)->nullable();
             $table->string('alamat', 250)->nullable();
             $table->string('kelurahan', 100)->nullable();
             $table->string('kecamatan', 100)->nullable();
@@ -36,8 +36,16 @@ class CreateSiswa extends Migration
             $table->string('no_ijazah', 30)->nullable();
             $table->string('no_skhun', 30)->nullable();
             $table->string('sekolah_asal', 230)->nullable();
+            $table->string('npsn_asal', 30)->nullable();
             $table->date('tgl_ijazah')->nullable();
             $table->date('tgl_skhun')->nullable();
+            $table->smallInteger('tinggi_badan')->nullable();
+            $table->smallInteger('berat_badan')->nullable();
+            $table->string('hp', 30)->nullable();
+            $table->string('status_keluarga', 50)->nullable();
+            $table->string('status_tinggal', 30)->nullable();
+            
+            
             $table->string('ayah_nama', 230);
             $table->string('ayah_tempat_lahir', 230);
             $table->date('ayah_tgl_lahir');

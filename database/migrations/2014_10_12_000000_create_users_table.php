@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password', 100);
             $table->string('hp', 25)->nullable();
             $table->tinyInteger('is_active')->default(1)->comment('0 = tidak aktif, 1 = aktif');
-            $table->smallInteger('user_type')->default(20)->comment('1 = super admin, 2 = admin, 20 = Guru, 50 = Siswa');
+            $table->smallInteger('user_type')->default(20)->comment('1 = super admin, 2 = admin, 10 = Pelayanan, 20 = Bendahara, 30 = TU, 40 = Tabsis, 50 = Guru, 100 = Siswa');
             $table->string('session', 25)->nullable();
             $table->string('permission', 220)->nullable();
             
