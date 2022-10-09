@@ -16,15 +16,15 @@
                 
                 <li class="nav-item pcoded-hasmenu ">
                     <a href="#!" class="nav-link ">
-                    <span class="pcoded-micon"><i class="feather icon-file-text"></i></span>
-                    <span class="pcoded-mtext">Kesantrian</span>
+                    <span class="pcoded-micon"><i class="feather icon-users"></i></span>
+                    <span class="pcoded-mtext">Siswa</span>
                     </a>
                     <ul class="pcoded-submenu">
                         <li>
-                             <a href="{{ URL::to('/') }}/table">Tabel</a>
+                             <a href="{{ URL::to('/') }}/adm/list-siswa">Tabel Siswa</a>
                         </li>
                         <li>
-                             <a href="{{ URL::to('/') }}/form">Form</a>
+                             <a href="#">Form</a>
                         </li>
                     </ul>
                 </li>
@@ -32,7 +32,7 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link " >
                         <span class="pcoded-micon">
-                            <i class="feather icon-home" style="color: #4099ff;"></i>
+                            <i class="feather icon-award"></i>
                         </span>
                         <span class="pcoded-mtext">
                             Akademik
@@ -42,7 +42,7 @@
                 
                 <li class="nav-item pcoded-hasmenu ">
                     <a href="#!" class="nav-link ">
-                    <span class="pcoded-micon"><i class="feather icon-flag"></i></span>
+                    <span class="pcoded-micon"><i class="feather icon-book"></i></span>
                     <span class="pcoded-mtext">Keuangan</span>
                     </a>
                     <ul class="pcoded-submenu">
