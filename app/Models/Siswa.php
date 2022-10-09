@@ -9,7 +9,7 @@ class Siswa extends Model {
     
     public function getInsertSiswa($data){
         try {
-            $lastInsertedID = DB::table('m_siswa')->insertGetId($data);
+            $lastInsertedID = DB::table('M_Siswa')->insertGetId($data);
             $result = (object) array('status' => true, 'message' => null, 'lastID' => $lastInsertedID);
         } catch (Exception $ex) {
             $message = $ex->getMessage();
@@ -20,7 +20,7 @@ class Siswa extends Model {
 
     public function getUpdateSiswa($fieldName, $name, $data){
         try {
-            DB::table('m_siswa')->where($fieldName, '=', $name)->update($data);
+            DB::table('M_Siswa')->where($fieldName, '=', $name)->update($data);
             $result = (object) array('status' => true, 'message' => null);
         } catch (Exception $ex) {
             $message = $ex->getMessage();
@@ -30,7 +30,7 @@ class Siswa extends Model {
     }
     
     public function getSiswa(){
-        $sql = DB::table('m_siswa')
+        $sql = DB::table('M_Siswa')
                     ->get();
         return $sql;
     }
