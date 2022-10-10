@@ -97,6 +97,9 @@
                         <li>
                              <a href="/adm/list-jurusan">List Jurusan</a>
                         </li>
+                        <li>
+                             <a href="/adm/list-kodejurnal">List Kode Jurnal</a>
+                        </li>
                     </ul>
                 </li>
 

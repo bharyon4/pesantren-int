@@ -47,5 +47,11 @@ class Setting extends Model {
         return $sql;
     }
     
+    public function getKodeJurnal(){
+        $sql = DB::table('M_Kodejurnal')
+                    ->get();
+        return $sql;
+    }
+    
     
 }

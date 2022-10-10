@@ -46,6 +46,15 @@ class SettingController extends Controller {
                     ->with('dataUser', $dataUser);
     }
     
+    public function getListKodeJurnal(){
+        $dataUser = Auth::user();
+        $modelSetting = New Setting;
+        $getData = $modelSetting->getKodeJurnal();
+        return view('admin.setting.kodejurnal')
+                    ->with('getData', $getData)
+                    ->with('dataUser', $dataUser);
+    }
+    
     
     
 }

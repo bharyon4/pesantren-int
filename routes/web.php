@@ -33,6 +33,7 @@ Route::prefix('/')->group(function () {
     Route::get('/adm/list-settingpembayaran', 'App\Http\Controllers\Admin\SettingController@getListSettingPembayaran')->name('adm_ListSettingPembayaran')->middleware('auth');
     Route::get('/adm/list-jenisspp', 'App\Http\Controllers\Admin\SettingController@getListJenisSPP')->name('adm_ListJenisSPP')->middleware('auth');
     Route::get('/adm/list-jurusan', 'App\Http\Controllers\Admin\SettingController@getListJurusan')->name('adm_ListJurusan')->middleware('auth');
+    Route::get('/adm/list-kodejurnal', 'App\Http\Controllers\Admin\SettingController@getListKodeJurnal')->name('adm_getListKodeJurnal')->middleware('auth');
     
     //contoh
     Route::get('/table', 'App\Http\Controllers\Admin\HomeController@getTable')->name('getTable')->middleware('auth');
