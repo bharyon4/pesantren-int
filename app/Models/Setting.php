@@ -5,11 +5,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Validator;
 
-class Siswa extends Model {
+class Setting extends Model {
     
-    public function getInsertSiswa($data){
+    public function getInsert($table, $data){
         try {
-            $lastInsertedID = DB::table('M_Siswa')->insertGetId($data);
+            $lastInsertedID = DB::table($table)->insertGetId($data);
             $result = (object) array('status' => true, 'message' => null, 'lastID' => $lastInsertedID);
         } catch (Exception $ex) {
             $message = $ex->getMessage();
@@ -18,9 +18,9 @@ class Siswa extends Model {
         return $result;
     }
 
-    public function getUpdateSiswa($fieldName, $name, $data){
+    public function getUpdate($table, $fieldName, $name, $data){
         try {
-            DB::table('M_Siswa')->where($fieldName, '=', $name)->update($data);
+            DB::table($table)->where($fieldName, '=', $name)->update($data);
             $result = (object) array('status' => true, 'message' => null);
         } catch (Exception $ex) {
             $message = $ex->getMessage();
@@ -29,26 +29,20 @@ class Siswa extends Model {
         return $result;
     }
     
-    public function getSiswa(){
-        $sql = DB::table('M_Siswa')
+    public function getSettingPembayaran(){
+        $sql = DB::table('M_Setingpembayaran')
                     ->get();
         return $sql;
     }
     
-    public function getKelas(){
-        $sql = DB::table('M_Kelas')
+    public function getJenisSPP(){
+        $sql = DB::table('M_Jenisspp')
                     ->get();
         return $sql;
     }
     
-    public function getJabatan(){
-        $sql = DB::table('M_Jabatan')
-                    ->get();
-        return $sql;
-    }
-    
-    public function getGuruPengurus(){
-        $sql = DB::table('M_Gurupengurus')
+    public function getJurusan(){
+        $sql = DB::table('M_Jurusan')
                     ->get();
         return $sql;
     }

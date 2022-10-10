@@ -28,6 +28,33 @@ class SiswaController extends Controller {
                     ->with('dataUser', $dataUser);
     }
     
+    public function getListKelas(){
+        $dataUser = Auth::user();
+        $modelSiswa = New Siswa;
+        $getData = $modelSiswa->getKelas();
+        return view('admin.siswa.kelas')
+                    ->with('getData', $getData)
+                    ->with('dataUser', $dataUser);
+    }
+    
+    public function getListJabatan(){
+        $dataUser = Auth::user();
+        $modelSiswa = New Siswa;
+        $getData = $modelSiswa->getJabatan();
+        return view('admin.siswa.jabatan')
+                    ->with('getData', $getData)
+                    ->with('dataUser', $dataUser);
+    }
+    
+    public function getListGuruPengurus(){
+        $dataUser = Auth::user();
+        $modelSiswa = New Siswa;
+        $getData = $modelSiswa->getGuruPengurus();
+        return view('admin.siswa.gurupengurus')
+                    ->with('getData', $getData)
+                    ->with('dataUser', $dataUser);
+    }
+    
     
     
 }

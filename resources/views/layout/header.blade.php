@@ -1,4 +1,4 @@
-<header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed header-blue">
+<header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed header-green">
     <div class="m-header">
         <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
         <a href="#!" class="pop-search text-white" >

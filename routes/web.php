@@ -25,7 +25,14 @@ Route::prefix('/')->group(function () {
     
     //Siswa
     Route::get('/adm/list-siswa', 'App\Http\Controllers\Admin\SiswaController@getListSiswa')->name('adm_listSiswa')->middleware('auth');
+    Route::get('/adm/list-kelas', 'App\Http\Controllers\Admin\SiswaController@getListKelas')->name('adm_getListKelas')->middleware('auth');
+    Route::get('/adm/list-jabatan', 'App\Http\Controllers\Admin\SiswaController@getListJabatan')->name('adm_getListJabatan')->middleware('auth');
+//    Route::get('/adm/list-gurupengurus', 'App\Http\Controllers\Admin\SiswaController@getListGuruPengurus')->name('adm_getListGuruPengurus')->middleware('auth');
     
+    //Setting
+    Route::get('/adm/list-settingpembayaran', 'App\Http\Controllers\Admin\SettingController@getListSettingPembayaran')->name('adm_ListSettingPembayaran')->middleware('auth');
+    Route::get('/adm/list-jenisspp', 'App\Http\Controllers\Admin\SettingController@getListJenisSPP')->name('adm_ListJenisSPP')->middleware('auth');
+    Route::get('/adm/list-jurusan', 'App\Http\Controllers\Admin\SettingController@getListJurusan')->name('adm_ListJurusan')->middleware('auth');
     
     //contoh
     Route::get('/table', 'App\Http\Controllers\Admin\HomeController@getTable')->name('getTable')->middleware('auth');

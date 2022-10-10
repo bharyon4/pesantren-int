@@ -24,7 +24,19 @@
                              <a href="{{ URL::to('/') }}/adm/list-siswa">Tabel Siswa</a>
                         </li>
                         <li>
-                             <a href="#">Form</a>
+                             <a href="{{ URL::to('/') }}/adm/list-kelas">Kelas</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item pcoded-hasmenu ">
+                    <a href="#!" class="nav-link ">
+                    <span class="pcoded-micon"><i class="feather icon-user-check"></i></span>
+                    <span class="pcoded-mtext">Guru</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li>
+                             <a href="{{ URL::to('/') }}/adm/list-jabatan">Jabatan</a>
                         </li>
                     </ul>
                 </li>
@@ -66,6 +78,24 @@
                         </li>
                         <li>
                              <a href="#">Keuangan</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item pcoded-hasmenu ">
+                    <a href="#!" class="nav-link ">
+                    <span class="pcoded-micon"><i class="feather icon-settings"></i></span>
+                    <span class="pcoded-mtext">Pengaturan</span>
+                    </a>
+                    <ul class="pcoded-submenu">
+                        <li>
+                             <a href="/adm/list-settingpembayaran">List Setting Pembayaran</a>
+                        </li>
+                        <li>
+                             <a href="/adm/list-jenisspp">List Jenis SPP</a>
+                        </li>
+                        <li>
+                             <a href="/adm/list-jurusan">List Jurusan</a>
                         </li>
                     </ul>
                 </li>
