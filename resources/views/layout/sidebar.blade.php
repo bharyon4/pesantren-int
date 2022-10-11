@@ -59,7 +59,7 @@
                     </a>
                     <ul class="pcoded-submenu">
                         <li>
-                             <a href="/adm/pembayaran">Pembayaran</a>
+                             <a href="/adm/list/santri-pembayaran">Pembayaran Siswa</a>
                         </li>
                     </ul>
                 </li>

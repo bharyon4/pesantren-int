@@ -16,6 +16,8 @@ Route::prefix('/')->group(function () {
     
     //Keuangan
     Route::get('/adm/pembayaran', 'App\Http\Controllers\Admin\TransactionController@getPembayaran')->name('adm_pembayaran')->middleware('auth');
+    Route::get('/adm/list/santri-pembayaran', 'App\Http\Controllers\Admin\TransactionController@getListSantriPembayaran')->name('adm_getListSantriPembayaran')->middleware('auth');
+    Route::get('/adm/detail/santri-pembayaran/{id}', 'App\Http\Controllers\Admin\TransactionController@getDetailSantriPembayaran')->name('adm_getDetailSantriPembayaran')->middleware('auth');
     
     Route::get('/adm/setting/pembayaran', 'App\Http\Controllers\Admin\TransactionController@getSettingPembayaran')->name('adm_settingPembayaran')->middleware('auth');
     
