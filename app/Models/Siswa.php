@@ -35,6 +35,13 @@ class Siswa extends Model {
         return $sql;
     }
     
+    public function getSiswaByNIS($id){
+        $sql = DB::table('M_Siswa')
+                    ->where('NoInduk', '=', $id)
+                    ->first();
+        return $sql;
+    }
+    
     public function getKelas(){
         $sql = DB::table('M_Kelas')
                     ->get();

@@ -61,7 +61,7 @@ class TransactionController extends Controller {
     public function getDetailSantriPembayaran($id){
         $dataUser = Auth::user();
         $modelSiswa = New Siswa;
-        $getData = $modelSiswa->getSiswa();
+        $getData = $modelSiswa->getSiswaByNIS($id);
         return view('admin.transaction.detail-siswa')
                     ->with('getData', $getData)
                     ->with('dataUser', $dataUser);
